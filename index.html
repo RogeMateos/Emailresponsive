@@ -1,67 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Responsive email</title>
+    <style type="text/css">
+      body {margin: 10px 0; padding: 0 10px; background: #F9F2E7; font-size: 13px;}
+      table {border-collapse: collapse;}
+      td {font-family: arial, sans-serif; color: #333333;}
 
+      @media only screen and (max-width: 480px) {
+        body,table,td,p,a,li,blockquote {
+          -webkit-text-size-adjust:none !important;
+        }
+        table {width: 100% !important;}
 
-
-
- <!DOCTYPE html>
-<html lang="es">
-<head>
-    <title>Responsive</title>
-    <meta charset="utf-8" />
-    <meta name= "author"content="mateos">
-    		<link rel="stylesheet" href="css/main.css">
-            <link rel="stylesheet" href="css/escritorio.css" media="only screen and (min-width:769px)">	
-            <link rel="stylesheet" href="css/tablet.css" media="only screen and (min-width:481px) and (max-width:768px)">
-             	<link rel="stylesheet" href="css/phone.css" media="only screen and (max-width:480px)">
-             
-
-</head>
-
-<body>
-<section id="superior">
-    <div id="encabezado">
-        <nav>
-            <a href=""><img src="img/logo.png" alt=""></a>
-            <ul>
-              <li><a href="index.html"class="inicio">Inicio</a></li>
-              <li><a href="galeria.html"class="galeria">Galeria</a></li>
-              <li><a href="pedidos.html"class="pedidos">Pedidos</a></li>
-            </ul>
-        </nav>
-        <div id="imgDec">
-            <img src="img/pic_1.jpg" alt="">
-            <div id="descripcion">
-                <p>A site designed with RWD adapts the layout to the viewing environment by using fluid, proportion-based grids,flexible images, and CSS3 media queries, an extension of the @media rule.</p>
-         </div>    <!--     fin del div decripcion-->
-        </div>  <!--fin de imagen destacada-->
-
-    </div>        <!--    fin div encabezado -->
-</section>    
-<section id="contenido">
-    <div class="plan">
-        <img src="img/pic_min_1.jpg" alt="" width="580px" height="180">
-        <h1>Four external ccs files </h1>
-        <p>This is an example of responsive web design using media queries,i used 4 different css files, one for the main style and the other 3 for Desktop,Tablet and phone </p>
-        <p class="boton"><a href="">Read more</a></p>
-    </div>
-     <div class="plan">
-        <img src="img/pic_min_2.jpg" alt="" width="580px" height="180">
-        <h1>Using percentages</h1>
-        <p>The fluid grid concept calls for page element sizing to be in relative units like percentages, rather than absolute units like pixels or points.[5]</p>
-        <p class="boton"><a href="">Read more</a></p>
-    </div>
-     <div class="plan">
-        <img src="img/pic_min_3.jpg" alt="" width="580px" height="180">
-        <h1>Using mediaqueries</h1>
-        <p>Media queries allow the page to use different CSS style rules based on characteristics of the device the site is being displayed on, most commonly the width of the browser.</p>
-        <p class="boton"><a href="">Read more</a></p>
-   
-        
-    </div>
-</section>
-<footer>
-    <p>Responsive design a way of solving problems <br>
-    </p>
-</footer>
-</body>
+        .responsive-image img {
+          height: auto !important;
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td>
+          <table border="0" cellpadding="0" cellspacing="0" align="center" width="640" bgcolor="#FFFFFF">
+            <tr>
+              <td bgcolor="#00A8C6" style="font-size: 0; line-height: 0; padding: 0 10px;" height="140" align="center" class="responsive-image">
+                <img src="logo.png" width="440" alt="" />
+              </td>
+            </tr>
+            <tr><td style="font-size: 0; line-height: 0;" height="30">&nbsp;</td></tr>
+            <tr>
+              <td style="padding: 10px 10px 20px 10px;">
+                <div style="font-size: 20px;">Should you be sending HTML emails at all?</div>
+                <br />
+                <div>
+                 This is surely a debated issue, but ultimately I say if you have a message you feel would benefit from a nicely designed email you should go for it.
+                </div>
+              </td>
+            </tr>
+            <tr><td style="font-size: 0; line-height: 0;" height="1" bgcolor="#F9F9F9">&nbsp;</td></tr>
+            <tr><td style="font-size: 0; line-height: 0;" height="30">&nbsp;</td></tr>
+            <tr>
+              <td>
+                <table border="0" cellpadding="0" cellspacing="0" align="left" width="49%">
+                  <tr>
+                    <td style="padding: 0 10px 0 10px;" align="center" class="responsive-image">
+                      <img src="ph1.jpg" width="290" alt="" />
+                    </td>
+                  </tr>
+                  <tr><td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td></tr>
+                  <tr>
+                    <td style="padding: 0 10px 0 10px;">
+                      <div style="font-weight: bold; font-size: 16px;">Example responsive email</div>
+                      <div>
+                        Example of Responsive email using mediaqueries and tables.Tables are still the best way to achieve consistent results across email clients. The email equivalent of the browser window is the "viewport", or the area in an email client dedicated to showing the actual email.
+                      </div>
+                    </td>
+                  </tr>
+                  <tr><td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td></tr>
+                </table>
+                <table border="0" cellpadding="0" cellspacing="0" align="right" width="49%">
+                  <tr>
+                    <td style="padding: 0 10px 0 10px;" align="center" class="responsive-image">
+                      <img src="ph3.jpg" width="290" alt="" />
+                    </td>
+                  </tr>
+                  <tr><td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td></tr>
+                  <tr>
+                    <td style="padding: 0 10px 0 10px;">
+                      <div style="font-weight: bold; font-size: 16px;">Write your email before you design it</div>
+                      <div>
+                     The first thing you should do is to write the plain-text version of your email. Doing this first, while you are fresh, will lead to better copy, a better plan for the design, and ultimately a better email.
+                      </div>
+                    </td>
+                  </tr>
+                  <tr><td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td></tr>
+                </table>
+              </td>
+            </tr>
+            <tr><td style="font-size: 0; line-height: 0;" height="20">&nbsp;</td></tr>
+            <tr>
+              <td bgcolor="#485465">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr><td style="font-size: 0; line-height: 0;" height="15">&nbsp;</td></tr>
+                  <tr>
+                    <td style="padding: 0 10px; color: #FFFFFF;">
+                      Roge Mateos
+                    </td>
+                  </tr>
+                  <tr><td style="font-size: 0; line-height: 0;" height="15">&nbsp;</td></tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
-   
